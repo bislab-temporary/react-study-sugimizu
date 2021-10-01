@@ -1,14 +1,12 @@
-import React from "react"
-import { Input, Stack } from "@chakra-ui/react"
+import { Input, VStack } from "@chakra-ui/react"
 
 const InputBar = ()=> {
-    return (
-        <Stack spacing={10}>
-            <Input placeholder="extra small size" size="xs" />
-            <Input placeholder="small size" size="sm" />
-            <Input placeholder="medium size" size="md" />
-            <Input placeholder="large size" size="lg" />
-        </Stack>
+  return (
+    <VStack>
+      <Input variant="outline" placeholder="input lg" size="lg"/>
+      <Input variant="outline" placeholder="input md" size="md"/>
+      <Input placeholder="Basic usage" />
+    </VStack>
     )
 }
 
