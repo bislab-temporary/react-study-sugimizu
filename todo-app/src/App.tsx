@@ -1,7 +1,9 @@
-function App() {
+import InputBar from "./component/InputBar"
+
+const App = () => {
   return (
-    <p>テスト</p>
-  );
+    <InputBar />
+  )
 }
 
 export default App;
