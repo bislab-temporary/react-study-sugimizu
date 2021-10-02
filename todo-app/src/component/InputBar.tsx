@@ -3,15 +3,11 @@ import { Input, VStack, Box} from "@chakra-ui/react"
 
 const InputBar = ()=> {
   const [inputText, setInputText] = useState<string>("")
-  
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [todoList, setTodoList] = useState<string[]>([""])
+  const [todoList, setTodoList] = useState<string[]>([])
  
   const handleSubmit = (e: React.KeyboardEvent<HTMLInputElement>) => {
-      console.log("--submit--")
-      console.log("inputData: ", inputText)
       todoList.push(inputText)
-      console.log("todoList", todoList)
       setInputText("")
   }
 
@@ -34,7 +30,7 @@ const InputBar = ()=> {
       />
       {todoList.map((eachData) => {
         return (
-          <Box>{eachData}</Box>  
+          <Box w="500px" h="50px" p={5} shadow="md" borderWidth="1px">{eachData}</Box>  
         )
       })}
     </VStack>
