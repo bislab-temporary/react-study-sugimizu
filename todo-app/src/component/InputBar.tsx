@@ -35,8 +35,9 @@ const InputBar = ()=> {
             h="50px" 
             p={5} 
             shadow="md" 
-            borderWidth="1px">
-              {eachData}
+            borderWidth="1px"
+          >
+            {eachData}
           </Box>  
         )
       })}
