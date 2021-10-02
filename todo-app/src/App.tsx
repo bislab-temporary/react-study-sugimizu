@@ -1,4 +1,4 @@
-import { default as InputBar } from "./component/InputBar"
+import InputBar from "./component/InputBar"
 
 const App = () => {
   return (
