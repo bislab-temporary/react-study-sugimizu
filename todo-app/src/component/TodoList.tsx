@@ -1,6 +1,22 @@
-const TodoList = () => {
+import { Box, VStack } from "@chakra-ui/react"
+
+const TodoList = (todoList: string[]) => {
   return (
-    <p>テスト</p>
+    <VStack>
+      {todoList.map((eachData) => {
+        return (
+          <Box 
+            w="500px" 
+            h="50px" 
+            p={5}
+            shadow="md" 
+            borderWidth="1px"
+          >
+            {eachData}
+          </Box>  
+        )
+      })}
+    </VStack>
   )
 }
 
