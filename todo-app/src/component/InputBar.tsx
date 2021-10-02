@@ -1,8 +1,11 @@
 import { Input, VStack } from "@chakra-ui/react"
 
 const InputBar = ()=> {
-  const handleSubmit = () => {
-    console.log("--submit--")
+
+  const handleSubmit = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if( e.key === "Enter"){
+      console.log("--submit--")
+    }
   }
 
   const handleInputText: React.ChangeEventHandler<HTMLInputElement> = (
@@ -21,7 +24,7 @@ const InputBar = ()=> {
         variant="outline" 
         placeholder="input TODO"
         onChange={handleInputText}
-        onSubmit={handleSubmit}
+        onKeyDown={(e) => handleSubmit(e)}
       />
     </VStack>
   )
