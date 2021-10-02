@@ -1,4 +1,4 @@
-import { InputBar } from "./component/index"
+import { default as InputBar } from "./component/InputBar"
 import { Box } from "@chakra-ui/react"
 
 const App = () => {
