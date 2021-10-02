@@ -44,6 +44,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react": "^17.0.26"
+    "@types/react": "^17.0.26",
+    "prettier": "^2.3.0"
   }
 }
