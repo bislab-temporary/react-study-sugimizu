@@ -2,10 +2,8 @@ import { Input, VStack } from "@chakra-ui/react"
 
 const InputBar = ()=> {
   return (
-    <VStack>
-      <Input variant="outline" placeholder="input lg" size="lg"/>
-      <Input variant="outline" placeholder="input md" size="md"/>
-      <Input placeholder="Basic usage" />
+    <VStack pt="20px">
+      <Input w="500px" h="50px" variant="outline" placeholder="input TODO" />
     </VStack>
   )
 }
