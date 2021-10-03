@@ -4,12 +4,11 @@ import TodoList from "./TodoList";
 
 const InputBar = (): JSX.Element => {
   const [inputText, setInputText] = useState<string>("");
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [todoList, setTodoList] = useState<string[]>([]);
+  const [todoItems, setTodoItems] = useState<string[]>([]);
 
   const handleSubmit = (): void => {
-    const newTodoItems = [...todoList, inputText];
-    setTodoList(newTodoItems);
+    const newTodoItems = [...todoItems, inputText];
+    setTodoItems(newTodoItems);
   };
 
   return (
@@ -29,7 +28,7 @@ const InputBar = (): JSX.Element => {
           }
         }}
       />
-      {TodoList(todoList)}
+      {TodoList(todoItems)}
     </VStack>
   );
 };
