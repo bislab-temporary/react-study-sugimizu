@@ -1,13 +1,13 @@
 import React, { useState } from "react"
-import { Input, VStack, Box} from "@chakra-ui/react"
+import { Input, VStack } from "@chakra-ui/react"
 import TodoList from "./TodoList"
 
-const InputBar = ()=> {
+const InputBar = (): JSX.Element => {
   const [inputText, setInputText] = useState<string>("")
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [todoList, setTodoList] = useState<string[]>([])
 
-  const handleSubmit = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const handleSubmit = () => {
       todoList.push(inputText)
       setInputText("")
   }
@@ -25,7 +25,7 @@ const InputBar = ()=> {
         }}
         onKeyDown={(e) => {
           if(e.key === "Enter"){
-            handleSubmit(e)
+            handleSubmit()
           }
         }}
       />
