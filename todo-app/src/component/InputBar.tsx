@@ -1,37 +1,37 @@
-import React, { useState } from "react"
-import { Input, VStack } from "@chakra-ui/react"
-import TodoList from "./TodoList"
+import React, { useState } from "react";
+import { Input, VStack } from "@chakra-ui/react";
+import TodoList from "./TodoList";
 
 const InputBar = (): JSX.Element => {
-  const [inputText, setInputText] = useState<string>("")
+  const [inputText, setInputText] = useState<string>("");
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [todoList, setTodoList] = useState<string[]>([])
+  const [todoList, setTodoList] = useState<string[]>([]);
 
   const handleSubmit = () => {
-      todoList.push(inputText)
-      setInputText("")
-  }
+    todoList.push(inputText);
+    setInputText("");
+  };
 
   return (
     <VStack pt="10px">
-      <Input 
-        w="500px" 
-        h="50px" 
-        variant="outline" 
+      <Input
+        w="500px"
+        h="50px"
+        variant="outline"
         placeholder="input TODO"
         onChange={(e) => {
-          console.log(e.target.value)
-          setInputText(e.target.value)
+          console.log(e.target.value);
+          setInputText(e.target.value);
         }}
         onKeyDown={(e) => {
-          if(e.key === "Enter"){
-            handleSubmit()
+          if (e.key === "Enter") {
+            handleSubmit();
           }
         }}
       />
       {TodoList(todoList)}
     </VStack>
-  )
-}
+  );
+};
 
-export default InputBar
+export default InputBar;
