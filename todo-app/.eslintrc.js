@@ -43,19 +43,6 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
     "@typescript-eslint/no-use-before-define": ["error"],
-    "prettier/prettier": [
-      "error",
-      {
-        "printWidth": 140,
-        "tabWidth": 2,
-        "useTabs": false,
-        "semi": true,
-        "singleQuote": true,
-        "trailingComma": "all",
-        "bracketSpacing": true,
-        "arrowParens": "always"
-      }
-    ]
   },
   settings: {
     "import/resolver": {
