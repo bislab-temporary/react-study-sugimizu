@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, Dispatch, SetStateAction } from "react";
 import { Input, VStack } from "@chakra-ui/react";
-import TodoList from "./TodoList";
 
-const InputBar = (): JSX.Element => {
+type Props = {
+  todoItems: string[];
+  setTodoItems: Dispatch<SetStateAction<string[]>>;
+};
+
+const InputBar = (props: Props): JSX.Element => {
   const [inputText, setInputText] = useState<string>("");
-  const [todoItems, setTodoItems] = useState<string[]>([]);
 
   const handleSubmit = (): void => {
-    const newTodoItems = [...todoItems, inputText];
-    setTodoItems(newTodoItems);
+    const newTodoItems = [...props.todoItems, inputText];
+    props.setTodoItems(newTodoItems);
   };
 
   return (
@@ -19,7 +22,6 @@ const InputBar = (): JSX.Element => {
         variant="outline"
         placeholder="input TODO"
         onChange={(e) => {
-          console.log(e.target.value);
           setInputText(e.target.value);
         }}
         onKeyDown={(e) => {
@@ -28,7 +30,6 @@ const InputBar = (): JSX.Element => {
           }
         }}
       />
-      {TodoList(todoItems)}
     </VStack>
   );
 };
