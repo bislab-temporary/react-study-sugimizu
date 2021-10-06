@@ -4,11 +4,21 @@ import TodoItems from "./components/TodoItems";
 
 const App = (): JSX.Element => {
   const [todoItems, setTodoItems] = useState<string[]>([]);
+  const [todoStatus, setTodoStatus] = useState<boolean[]>([]);
 
   return (
     <>
-      <InputBar todoItems={todoItems} setTodoItems={setTodoItems} />
-      <TodoItems todoItems={todoItems} />
+      <InputBar
+        todoItems={todoItems}
+        todoStatus={todoStatus}
+        setTodoItems={setTodoItems}
+        setTodoStatus={setTodoStatus}
+      />
+      <TodoItems
+        todoItems={todoItems}
+        todoStatus={todoStatus}
+        setTodoStatus={setTodoStatus}
+      />
     </>
   );
 };

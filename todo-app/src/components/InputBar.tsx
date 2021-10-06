@@ -3,7 +3,9 @@ import { Input, VStack } from "@chakra-ui/react";
 
 type Props = {
   todoItems: string[];
+  todoStatus: boolean[];
   setTodoItems: Dispatch<SetStateAction<string[]>>;
+  setTodoStatus: Dispatch<SetStateAction<boolean[]>>;
 };
 
 const InputBar = (props: Props): JSX.Element => {
@@ -12,6 +14,8 @@ const InputBar = (props: Props): JSX.Element => {
   const handleSubmit = (): void => {
     const newTodoItems = [...props.todoItems, inputText];
     props.setTodoItems(newTodoItems);
+    const newTodoStatus = [...props.todoStatus, false];
+    props.setTodoStatus(newTodoStatus);
   };
 
   return (
