@@ -11,12 +11,9 @@ const TodoItems = (props: Props): JSX.Element => {
   const handleTodoStatus = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newTodoStatus = [...props.todoStatus];
     const elemetnNumber = +event.target.value;
-    console.log(elemetnNumber);
     newTodoStatus[elemetnNumber] = !newTodoStatus[elemetnNumber];
     props.setTodoStatus(newTodoStatus);
   };
-
-  console.log(props.todoStatus);
 
   return (
     <VStack>
@@ -37,6 +34,7 @@ const TodoItems = (props: Props): JSX.Element => {
         ) : (
           <Checkbox
             key={todoItem}
+            value={index}
             w="500px"
             h="50px"
             p={5}
