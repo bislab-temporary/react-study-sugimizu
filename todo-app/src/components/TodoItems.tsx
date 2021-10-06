@@ -1,4 +1,4 @@
-import React, { useState, Dispatch, SetStateAction } from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import { VStack, Checkbox } from "@chakra-ui/react";
 
 type Props = {
@@ -14,8 +14,6 @@ const TodoItems = (props: Props): JSX.Element => {
     newTodoStatus[elemetnNumber] = !newTodoStatus[elemetnNumber];
     props.setTodoStatus(newTodoStatus);
   };
-
-  console.log(props.todoStatus);
 
   return (
     <VStack>
