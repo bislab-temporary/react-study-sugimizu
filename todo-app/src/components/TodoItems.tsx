@@ -11,9 +11,12 @@ const TodoItems = (props: Props): JSX.Element => {
   const handleTodoStatus = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newTodoStatus = [...props.todoStatus];
     const elemetnNumber = +event.target.value;
+    console.log(elemetnNumber);
     newTodoStatus[elemetnNumber] = !newTodoStatus[elemetnNumber];
     props.setTodoStatus(newTodoStatus);
   };
+
+  console.log(props.todoStatus);
 
   return (
     <VStack>
@@ -39,7 +42,8 @@ const TodoItems = (props: Props): JSX.Element => {
             p={5}
             shadow="md"
             borderWidth="1px"
-            bg="gray.100"
+            as="del"
+            bg="gray.300"
             onChange={handleTodoStatus}
           >
             {todoItem}
