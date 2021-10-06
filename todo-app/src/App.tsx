@@ -7,7 +7,7 @@ const App = (): JSX.Element => {
 
   return (
     <>
-      <InputBar todoItems={todoItems} setTodoItems={setTodoItems} />;
+      <InputBar todoItems={todoItems} setTodoItems={setTodoItems} />
       <TodoItems todoItems={todoItems} />
     </>
   );
